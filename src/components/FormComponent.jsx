@@ -7,7 +7,10 @@ const FormComponent = () => {
     firstname: "",
     lastname: "",
     email: "",
-    password: "",
+    jobtitle: "",
+    department: "",
+    phonenumber: "",
+    officeno: "",
   });
   const [selectedtemp, setselectedtemp] = useState("temp1");
   function handlechange(e) {
@@ -49,12 +52,36 @@ const FormComponent = () => {
               value={formdata.email}
               onChange={handlechange}
             />
-            <label htmlFor="password">Password</label>
+            <label htmlFor="jobtitle">job title</label>
             <input
-              type="password"
-              name="password"
-              placeholder="Enter the Password"
-              value={formdata.password}
+              type="text"
+              name="jobtitle"
+              placeholder="Enter the JobTitle"
+              value={formdata.jobtitle}
+              onChange={handlechange}
+            />
+            <label htmlFor="department">Department</label>
+            <input
+              type="text"
+              name="department"
+              placeholder="Enter the JobTitle"
+              value={formdata.department}
+              onChange={handlechange}
+            />
+            <label htmlFor="phonenumber">Phone no.</label>
+            <input
+              type="phone"
+              name="phonenumber"
+              placeholder="Enter the Number"
+              value={formdata.phonenumber}
+              onChange={handlechange}
+            />
+            <label htmlFor="officeno">Telephone</label>
+            <input
+              type="phone"
+              name="officeno"
+              placeholder="Enter the Telephone"
+              value={formdata.officeno}
               onChange={handlechange}
             />
           </form>

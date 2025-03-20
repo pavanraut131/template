@@ -56,7 +56,7 @@ const Template = ({ formdata }) => {
                             lineHeight: "24px",
                           }}
                         >
-                          <span>jjj</span>
+                          <span>{formdata?.jobtitle}</span>
                         </p>
                         <div
                           style={{
@@ -68,9 +68,9 @@ const Template = ({ formdata }) => {
                             paddingBottom: "30px",
                           }}
                         >
-                          <span>kkk</span>
+                          <span>{formdata?.jobtitle}</span>
                           <span> | </span>
-                          <span>kkk</span>
+                          <span>{formdata?.department}</span>
                         </div>
                       </td>
                     </tr>
@@ -85,7 +85,25 @@ const Template = ({ formdata }) => {
                               <td className={styles.horizontalline}></td>
                             </tr>
                             <tr>
-                              <td>1</td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>img</td>
+                              <td style={{ fontFamily: "revert-layer" }}>
+                                <span> {formdata?.phonenumber} </span>
+                                {formdata.phonenumber && formdata.officeno
+                                  ? "|"
+                                  : ""}{" "}
+                                <span> {formdata?.officeno}</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>img</td>
+                              <td>{formdata.email}</td>
                             </tr>
                           </tbody>
                         </table>
