@@ -1,14 +1,16 @@
 import React from "react";
 import styles from "./template.module.css";
-const Template = () => {
+const Template = ({ formdata }) => {
+  // const { firstname, lastname, email, password } = formdata;
+  console.log(formdata?.firstname);
   return (
     <div className={styles["outer-container"]}>
       <div className={styles["outer-template"]}>
         <div className={styles.templates}>
           <div className={styles.bar}>
-            <div>button1</div>
-            <div>button2</div>
-            <div>button3</div>
+            <div className={styles.innerBar}></div>
+            <div className={styles.innerBar}></div>
+            <div className={styles.innerBar}></div>
           </div>
           <div className={styles["sub-container"]}>
             <div className={styles["to-text"]}>
@@ -42,9 +44,9 @@ const Template = () => {
                             fontWeight: "600",
                           }}
                         >
-                          <span>name</span>
-                          <span>linespacing</span>
-                          <span>lastname</span>
+                          <span>{formdata?.firstname}</span>
+                          <span> </span>
+                          <span>{formdata?.lastname}</span>
                         </h2>
                         <p
                           style={{

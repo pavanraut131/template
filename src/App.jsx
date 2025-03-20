@@ -1,9 +1,11 @@
+import FormComponent from "./components/FormComponent";
 import Template from "./components/Template";
 
 function App() {
   return (
     <>
-      <Template />
+      <FormComponent />
+      {/* <Template /> */}
     </>
   );
 }

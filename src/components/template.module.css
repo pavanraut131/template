@@ -9,21 +9,43 @@
 }
 .outer-template {
   display: flex;
-  width: 80%;
+  width: 100%;
+  position: relative;
 }
 .templates {
   width: 80%;
+  margin: auto;
   border-radius: 4px;
   padding-top: 1.2rem;
+  overflow: hidden;
+  position: relative;
 }
 .bar {
   display: flex;
   flex-direction: row;
   border-radius: 8px;
   background-color: rgb(33, 51, 67);
-  width: 97%;
+  width: 98%;
   padding: 1rem;
   gap: 2px;
+  position: absolute;
+  overflow: hidden;
+
+  .innerBar:nth-child(1) {
+    background-color: red;
+  }
+  .innerBar:nth-child(2) {
+    background-color: green;
+  }
+  .innerBar:nth-child(3) {
+    background-color: yellow;
+  }
+  .innerBar {
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 2px;
+  }
 }
 .sub-container {
   display: flex;
@@ -36,6 +58,7 @@
   flex-direction: column;
   font-size: 0.875rem;
   gap: 10px;
+  margin-top: 36px;
 }
 .to {
   background-color: #cef2f2;
@@ -49,16 +72,17 @@
 .outer-div {
   box-sizing: border-box;
   background-color: #ffffff;
+  position: relative;
 }
 .middle-div {
   align-items: center;
   display: flex;
   justify-content: center;
   min-height: 40vh;
+  min-width: 58vh;
   overflow: hidden;
   position: relative;
   padding: 1.5rem 2rem;
-  width: 80%;
 }
 .inner-div {
   user-select: none;
@@ -79,10 +103,17 @@ table {
   width: 100%;
   max-width: 100%;
 }
+table tr,
+table th,
+table td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 .horizontalline {
-  width: auto;
+  width: 96%;
   height: 1px;
-  border: 1px solid rgb(180, 97, 75);
+  border-bottom: 1px solid rgb(180, 97, 75);
   border-left: none;
   display: block;
 }
